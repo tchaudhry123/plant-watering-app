@@ -1,0 +1,271 @@
+.app-shell {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(207, 245, 222, 0.8), transparent 42%),
+    radial-gradient(circle at 85% 0%, rgba(204, 234, 247, 0.75), transparent 40%),
+    #f5f9f3;
+}
+
+.app {
+  width: min(960px, 100%);
+  margin: 0 auto;
+  padding: 1rem 0.9rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.app__header {
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(6px);
+  border: 1px solid #dce8de;
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.app__header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.app__header p {
+  margin: 0.4rem 0 0;
+  color: #4f6352;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.summary__item {
+  background: #fff;
+  border: 1px solid #dae8dc;
+  border-radius: 14px;
+  padding: 0.7rem;
+  text-align: center;
+}
+
+.summary__item--due {
+  border-color: #e9bf95;
+  background: #fff5ea;
+}
+
+.summary__value {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.summary__label {
+  color: #5b6d5e;
+  font-size: 0.85rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #dae8dc;
+  border-radius: 16px;
+  padding: 0.9rem;
+}
+
+.card h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.05rem;
+}
+
+.plant-form,
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #cad9cd;
+  padding: 0.62rem 0.74rem;
+  background: #fbfdfb;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.55rem;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.62rem 0.9rem;
+  color: #fff;
+  background: #2f7f4f;
+  font-weight: 600;
+}
+
+button:hover {
+  opacity: 0.92;
+}
+
+button.ghost {
+  background: #e8f0e9;
+  color: #244532;
+}
+
+button.danger {
+  background: #b94a45;
+}
+
+.filters {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.filters button {
+  flex: 1;
+  background: #eef4ee;
+  color: #32513d;
+  border: 1px solid #d5e1d7;
+}
+
+.filters button.active {
+  background: #2f7f4f;
+  border-color: #2f7f4f;
+  color: #fff;
+}
+
+.status-row {
+  min-height: 1.3rem;
+}
+
+.status {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.18rem 0.65rem;
+  font-size: 0.8rem;
+}
+
+.status--loading {
+  background: #e8f4fa;
+  color: #1e5670;
+}
+
+.status--error {
+  background: #fde8e8;
+  color: #923937;
+}
+
+.plant-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.plant-card {
+  background: #fff;
+  border: 1px solid #d9e7dc;
+  border-radius: 16px;
+  padding: 0.8rem;
+}
+
+.plant-card__top {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 0.65rem;
+}
+
+.plant-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.species {
+  margin: 0.2rem 0 0;
+  font-size: 0.92rem;
+  color: #56715e;
+}
+
+.badge {
+  border-radius: 999px;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.badge--due {
+  background: #fde9d8;
+  color: #9a4f1a;
+}
+
+.badge--soon {
+  background: #fff1cc;
+  color: #7d5f00;
+}
+
+.badge--ok {
+  background: #e4f6e8;
+  color: #206738;
+}
+
+.plant-meta {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.25rem;
+  color: #355041;
+  font-size: 0.93rem;
+}
+
+.actions {
+  margin-top: 0.7rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.45rem;
+}
+
+.empty {
+  border: 1px dashed #bfd0c3;
+  border-radius: 14px;
+  background: #f8fbf7;
+  text-align: center;
+  padding: 1rem;
+  color: #5b6d5e;
+}
+
+@media (min-width: 720px) {
+  .app {
+    padding: 1.4rem 1.2rem 2.4rem;
+    gap: 1rem;
+  }
+
+  .plant-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    grid-template-columns: 1fr;
+  }
+}
