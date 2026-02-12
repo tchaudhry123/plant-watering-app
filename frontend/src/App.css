@@ -1,99 +1,114 @@
 .app-shell {
   min-height: 100vh;
   background:
-    radial-gradient(1300px 700px at -8% -20%, rgba(246, 198, 138, 0.26), transparent 60%),
-    radial-gradient(1100px 700px at 100% 0%, rgba(140, 199, 173, 0.2), transparent 58%),
-    linear-gradient(180deg, #f9faf4 0%, #eef4ea 100%);
+    radial-gradient(900px 600px at 110% -10%, rgba(198, 255, 0, 0.18), transparent 58%),
+    radial-gradient(900px 500px at -10% 110%, rgba(198, 255, 0, 0.11), transparent 52%),
+    #0b0b0b;
 }
 
 .app {
-  width: min(1080px, 100%);
+  width: min(1100px, 100%);
   margin: 0 auto;
-  padding: 1rem 0.9rem 2.2rem;
+  padding: 1rem 0.85rem 2rem;
   display: grid;
-  gap: 0.95rem;
+  gap: 0.8rem;
 }
 
 .app__header {
-  border-radius: 22px;
-  padding: 1.05rem 1.05rem 1.15rem;
-  border: 1px solid #d6dfd0;
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(7px);
-  box-shadow: 0 16px 34px rgba(29, 50, 35, 0.08);
+  border-radius: 20px;
+  padding: 1.05rem;
+  color: #ffffff;
+  border: 1px solid #2a2a2a;
+  background:
+    linear-gradient(130deg, rgba(198, 255, 0, 0.18) 0%, transparent 30%),
+    linear-gradient(180deg, #191919 0%, #111111 100%);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.45);
 }
 
 .app__eyebrow {
   margin: 0;
-  font-size: 0.75rem;
-  font-weight: 800;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #5b7b67;
+  color: #c6ff00;
+  font-weight: 700;
 }
 
 .app__header h1 {
-  margin: 0.22rem 0 0;
-  font-size: clamp(1.45rem, 4.6vw, 2.2rem);
-  line-height: 1.06;
-  letter-spacing: -0.03em;
-  color: #183f2a;
+  margin: 0.32rem 0 0;
+  font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+  font-size: clamp(2rem, 9vw, 4rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 0.96;
 }
 
 .app__header p {
-  margin: 0.46rem 0 0;
-  color: #4e6353;
-  max-width: 60ch;
+  margin: 0.52rem 0 0;
+  max-width: 62ch;
+  color: #c9c9c9;
+  font-size: 0.95rem;
 }
 
 .summary {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.6rem;
+  gap: 0.55rem;
 }
 
 .summary__item {
-  border-radius: 16px;
-  padding: 0.75rem 0.6rem;
-  border: 1px solid #d9e2d4;
-  background: rgba(255, 255, 255, 0.86);
+  border-radius: 14px;
+  border: 1px solid #2e2e2e;
+  background: #151515;
   text-align: center;
+  color: #ffffff;
+  padding: 0.7rem 0.4rem;
 }
 
 .summary__item--due {
-  border-color: #edcba9;
-  background: #fff5ea;
+  border-color: #c6ff00;
+  box-shadow: inset 0 0 0 1px rgba(198, 255, 0, 0.28);
 }
 
 .summary__value {
   display: block;
-  font-size: clamp(1.12rem, 3.8vw, 1.4rem);
-  font-weight: 800;
+  font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+  font-size: clamp(1.35rem, 5vw, 2rem);
+  letter-spacing: 0.05em;
 }
 
 .summary__label {
-  font-size: 0.8rem;
-  color: #627363;
+  color: #a9a9a9;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.card,
+.plant-card,
+.empty {
+  border-radius: 16px;
+  border: 1px solid #2d2d2d;
+  background: #131313;
+  color: #f5f5f5;
 }
 
 .card {
-  border-radius: 20px;
-  border: 1px solid #d8e2d2;
-  background: rgba(255, 255, 255, 0.88);
-  box-shadow: 0 14px 24px rgba(37, 58, 43, 0.06);
-  padding: 0.95rem;
+  padding: 0.9rem;
 }
 
 .card h2 {
-  margin: 0 0 0.68rem;
-  font-size: 1.03rem;
-  color: #284a37;
+  margin: 0 0 0.55rem;
+  font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 1.45rem;
 }
 
 .plant-form,
 .edit-form {
   display: grid;
-  gap: 0.56rem;
+  gap: 0.55rem;
 }
 
 input,
@@ -105,24 +120,24 @@ button {
 input,
 textarea {
   width: 100%;
-  border-radius: 12px;
-  border: 1px solid #c6d4c7;
-  background: #fbfdf8;
-  padding: 0.64rem 0.75rem;
-  color: #224633;
-  transition: border-color 0.16s ease, box-shadow 0.16s ease;
+  border-radius: 10px;
+  border: 1px solid #333333;
+  background: #0d0d0d;
+  color: #f2f2f2;
+  padding: 0.64rem 0.72rem;
+  transition: border-color 0.14s ease, box-shadow 0.14s ease;
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: #6b8170;
+  color: #858585;
 }
 
 input:focus,
 textarea:focus {
   outline: none;
-  border-color: #4c8f68;
-  box-shadow: 0 0 0 3px rgba(85, 150, 110, 0.16);
+  border-color: #c6ff00;
+  box-shadow: 0 0 0 3px rgba(198, 255, 0, 0.18);
 }
 
 textarea {
@@ -132,22 +147,24 @@ textarea {
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.56rem;
+  gap: 0.55rem;
 }
 
 button {
-  border: 0;
-  border-radius: 12px;
-  color: #fff;
-  background: linear-gradient(135deg, #2f7f4f 0%, #296a44 100%);
-  padding: 0.63rem 0.94rem;
+  border: none;
+  border-radius: 10px;
+  padding: 0.65rem 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   font-weight: 700;
-  transition: transform 0.16s ease, box-shadow 0.16s ease, opacity 0.16s ease;
+  color: #0c0c0c;
+  background: #c6ff00;
+  transition: transform 0.14s ease, filter 0.14s ease;
 }
 
 button:hover {
+  filter: brightness(1.06);
   transform: translateY(-1px);
-  box-shadow: 0 9px 20px rgba(41, 106, 68, 0.24);
 }
 
 button:active {
@@ -155,16 +172,13 @@ button:active {
 }
 
 button.ghost {
-  background: #ecf3ee;
-  color: #244935;
-}
-
-button.ghost:hover {
-  box-shadow: 0 7px 16px rgba(36, 73, 53, 0.12);
+  background: #242424;
+  color: #ececec;
 }
 
 button.danger {
-  background: linear-gradient(135deg, #cc5a56 0%, #ad403c 100%);
+  background: #ff4d4d;
+  color: #ffffff;
 }
 
 .filters {
@@ -174,52 +188,46 @@ button.danger {
 }
 
 .filters button {
-  background: rgba(255, 255, 255, 0.8);
-  color: #2f4d3a;
-  border: 1px solid #cedbcc;
+  background: #171717;
+  color: #dddddd;
+  border: 1px solid #2f2f2f;
 }
 
 .filters button.active {
-  background: linear-gradient(135deg, #2f7f4f 0%, #296a44 100%);
-  border-color: #2f7f4f;
-  color: #fff;
+  background: #c6ff00;
+  color: #0b0b0b;
+  border-color: #c6ff00;
 }
 
 .status-row {
-  min-height: 1.25rem;
+  min-height: 1.2rem;
 }
 
 .status {
   display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
   border-radius: 999px;
-  font-size: 0.8rem;
-  padding: 0.2rem 0.62rem;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.56rem;
 }
 
 .status--loading {
-  color: #1f5d79;
-  background: #def1fd;
+  background: #262626;
+  color: #cfcfcf;
 }
 
 .status--error {
-  color: #932f2f;
-  background: #fce7e7;
+  background: #2a1414;
+  color: #ff8585;
 }
 
 .plant-list {
   display: grid;
-  gap: 0.68rem;
+  gap: 0.65rem;
 }
 
 .plant-card {
-  border-radius: 18px;
-  border: 1px solid #d5e0d3;
-  background: rgba(255, 255, 255, 0.92);
-  padding: 0.84rem;
-  box-shadow: 0 10px 20px rgba(34, 55, 40, 0.05);
-  animation: card-in 260ms ease both;
+  padding: 0.82rem;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.36);
 }
 
 .plant-card__top {
@@ -232,37 +240,46 @@ button.danger {
 
 .plant-card h3 {
   margin: 0;
-  font-size: 1.04rem;
-  color: #1f412f;
+  font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }
 
 .species {
-  margin: 0.2rem 0 0;
-  color: #607765;
-  font-size: 0.9rem;
+  margin: 0.1rem 0 0;
+  color: #a0a0a0;
+  font-size: 0.86rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .badge {
   border-radius: 999px;
-  padding: 0.29rem 0.6rem;
-  font-size: 0.74rem;
-  font-weight: 800;
-  white-space: nowrap;
+  padding: 0.28rem 0.58rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
 }
 
 .badge--due {
-  background: #ffe7d2;
-  color: #95501f;
+  color: #ff7d7d;
+  background: #2d1515;
+  border-color: #5b2424;
 }
 
 .badge--soon {
-  background: #fff2c9;
-  color: #7b5a03;
+  color: #ffe58a;
+  background: #2c2612;
+  border-color: #5f531f;
 }
 
 .badge--ok {
-  background: #def3e3;
-  color: #1f6a3a;
+  color: #c6ff00;
+  background: #1a2510;
+  border-color: #425b13;
 }
 
 .plant-meta {
@@ -270,31 +287,29 @@ button.danger {
   padding: 0;
   list-style: none;
   display: grid;
-  gap: 0.24rem;
-  color: #385245;
-  font-size: 0.92rem;
+  gap: 0.23rem;
+  color: #cacaca;
+  font-size: 0.9rem;
 }
 
 .actions {
-  margin-top: 0.7rem;
+  margin-top: 0.72rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.42rem;
 }
 
 .empty {
-  border-radius: 16px;
-  border: 1px dashed #bbcdba;
-  background: rgba(249, 252, 247, 0.88);
-  text-align: center;
-  color: #5f725f;
   padding: 1rem;
+  text-align: center;
+  color: #b5b5b5;
+  border-style: dashed;
 }
 
-@media (min-width: 780px) {
+@media (min-width: 760px) {
   .app {
-    padding: 1.35rem 1.25rem 2.3rem;
-    gap: 1rem;
+    padding: 1.3rem 1.2rem 2.5rem;
+    gap: 0.95rem;
   }
 
   .plant-list {
@@ -309,16 +324,5 @@ button.danger {
 
   .actions {
     grid-template-columns: 1fr;
-  }
-}
-
-@keyframes card-in {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
