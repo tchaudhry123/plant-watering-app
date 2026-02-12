@@ -131,8 +131,9 @@ function App() {
     <div className="app-shell">
       <main className="app">
         <header className="app__header">
-          <h1>Plant Watering</h1>
-          <p>Track when each plant needs water and stay ahead of dry soil.</p>
+          <p className="app__eyebrow">Plant Care Dashboard</p>
+          <h1>Plant Watering App</h1>
+          <p>Track watering dates, spot overdue plants fast, and keep your collection healthy.</p>
         </header>
 
         <section className="summary">
